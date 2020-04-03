@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { MDBCol, MDBBadge, MDBBtn } from "mdbreact";
+import { MDBCol, MDBBadge } from "mdbreact";
 import genres from '../functions/Genres'
+import {Link} from 'react-router-dom'
 
 const MovieCard = props => {
 const imgBaseURL = "http://image.tmdb.org/t/p/w1280/";
@@ -46,7 +47,7 @@ const [movieGenre, setMovieGenre] = useState([])
            
             </p>
            
-            <MDBBtn color='blue-grey'> More</MDBBtn>
+            <Link className='btn btn-blue-grey'  to={`/detail/${movie.id}`} > More </Link>
           </div>
           <MDBBadge color='teal lighten-3'>{movieGenre.join(' , ')}</MDBBadge>
         </div>

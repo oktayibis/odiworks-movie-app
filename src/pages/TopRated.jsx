@@ -16,8 +16,6 @@ const TopRated = () => {
       });
   }, []);
 
-
-
   return (
     <div>
       <MDBRow>

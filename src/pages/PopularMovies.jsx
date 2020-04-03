@@ -16,8 +16,6 @@ const PopularMovies = () => {
       });
   }, []);
 
-
-
   return (
     <div>
       <MDBRow>

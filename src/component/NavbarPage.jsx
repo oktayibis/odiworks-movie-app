@@ -1,4 +1,4 @@
-import React, { createRef, Component } from "react";
+import React, { Component } from "react";
 import {
   MDBNavbar,
   MDBNavbarNav,
@@ -9,14 +9,11 @@ import {
 import { HashRouter as Router } from "react-router-dom";
 
 class NavbarPage extends Component {
-
   state = {
-    whichLink : '/',
-  }
+    whichLink: "/"
+  };
 
-
-
-  handleLink = (link) => {
+  handleLink = link => {
     this.setState({
       whichLink: link
     });
@@ -25,22 +22,43 @@ class NavbarPage extends Component {
   render() {
     return (
       <Router>
-        <div  className="navbar-container">
+        <div className="navbar-container">
           <MDBNavbar color="teal" dark expand="lg">
             <MDBNavbarNav left>
               <MDBNavItem active={this.state.whichLink === "/" ? true : false}>
-                <MDBNavLink onClick={()=>this.handleLink('/')} to="/">
+                <MDBNavLink onClick={() => this.handleLink("/")} to="/">
                   Now Playing
                 </MDBNavLink>
               </MDBNavItem>
-              <MDBNavItem active={this.state.whichLink === "/populer" ? true : false}> 
-                <MDBNavLink onClick={()=>this.handleLink('/populer')} to="/popular-movies">Popular Movies</MDBNavLink>
+              <MDBNavItem
+                active={this.state.whichLink === "/populer" ? true : false}
+              >
+                <MDBNavLink
+                  onClick={() => this.handleLink("/populer")}
+                  to="/popular-movies"
+                >
+                  Popular Movies
+                </MDBNavLink>
               </MDBNavItem>
-              <MDBNavItem active={this.state.whichLink === "/top-rated" ? true : false}>
-                <MDBNavLink onClick={()=>this.handleLink('/top-rated')}   to="/top-rated">Top Rated</MDBNavLink>
+              <MDBNavItem
+                active={this.state.whichLink === "/top-rated" ? true : false}
+              >
+                <MDBNavLink
+                  onClick={() => this.handleLink("/top-rated")}
+                  to="/top-rated"
+                >
+                  Top Rated
+                </MDBNavLink>
               </MDBNavItem>
-              <MDBNavItem active={this.state.whichLink === "/coming-soon" ? true : false}>
-                <MDBNavLink onClick={()=>this.handleLink('/coming-soon')}  to="/coming-soon">Coming Soon</MDBNavLink>
+              <MDBNavItem
+                active={this.state.whichLink === "/coming-soon" ? true : false}
+              >
+                <MDBNavLink
+                  onClick={() => this.handleLink("/coming-soon")}
+                  to="/coming-soon"
+                >
+                  Coming Soon
+                </MDBNavLink>
               </MDBNavItem>
             </MDBNavbarNav>
             <MDBNavbarNav right>

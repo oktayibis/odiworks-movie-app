@@ -3,7 +3,7 @@ import MovieCard from "../Cards/MovieCard";
 import { MDBRow } from "mdbreact";
 import {useParams} from 'react-router-dom'
 
-const SearchPage = (props) => {
+const SearchPage = () => {
   let {searchKey} =  useParams();
 
   const [movies, setMovies] = useState([]);
