@@ -12,7 +12,6 @@ class NavbarPage extends Component {
   state = {
     whichLink: "/"
   };
-
   handleLink = link => {
     this.setState({
       whichLink: link

@@ -92,7 +92,7 @@ useEffect(()=>{
            </MDBRow>
            <MDBRow>
                 {cast.map(actor => {
-                    return <ActorCard actor={actor} />
+                    return <ActorCard key={actor.id} actor={actor} />
                 })}
            </MDBRow>
        </MDBCol>

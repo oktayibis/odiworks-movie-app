@@ -8,6 +8,7 @@ import PopularMovies from "./pages/PopularMovies";
 import TopRated from "./pages/TopRated";
 import SearchPage from "./pages/SearchPage";
 import MovieDetail from "./pages/MovieDetail";
+import ActorDetail from "./pages/ActorDetail";
 
 function App() {
   const [searchKey, setSearchKey] = useState("");
@@ -38,6 +39,9 @@ function App() {
         </Route>
         <Route path="/detail/:movieId">
           <MovieDetail />
+        </Route>
+        <Route path="/actor/:actorID">
+          <ActorDetail />
         </Route>
       </Switch>
 

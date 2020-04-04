@@ -7,6 +7,7 @@ import {
   MDBCol,
   MDBView
 } from "mdbreact";
+import { Link } from "react-router-dom";
 
 const ActorCard = props => {
   const { actor } = props;
@@ -16,6 +17,9 @@ const ActorCard = props => {
     <MDBCol size="3">
       <MDBCard wide cascade>
         <MDBView cascade>
+        <Link to={`/actor/${actor.id}`}>
+
+       
           <MDBCardImage
             hover
             overlay="white-slight"
@@ -23,18 +27,19 @@ const ActorCard = props => {
             src={imgBaseURL + actor.profile_path}
             alt="Card cap"
           />
+           </Link>
         </MDBView>
 
-        <MDBCardBody cascade className="text-center">
-          <MDBCardTitle className="card-title ">
-            <strong style={{ fontSize: "1rem" }}>{actor.name}</strong>
+        <MDBCardBody cascade >
+          <MDBCardTitle className="card-title text-center">
+           <Link className='text-dark' to={`/actor/${actor.id}`}>  <strong style={{ fontSize: "1rem" }}>{actor.name}</strong></Link>
           </MDBCardTitle>
 
           <p
             style={{ fontSize: "0.7rem" }}
-            className="font-weight-bold blue-text"
+            className="blue-text text-center"
           >
-            {actor.character}
+          {actor.character}
           </p>
         </MDBCardBody>
       </MDBCard>
