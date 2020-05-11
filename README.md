@@ -1,3 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Movie Web
 This web site using MovieDB API service for listing movies. Created with React and Material-UI. 
 You may filter catagaries and search movie. 
